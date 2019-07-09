@@ -1,5 +1,9 @@
 FROM marvambass/apache2-ssl-php
-MAINTAINER MarvAmBass
+MAINTAINER tech-trans-kenny-yue
+
+ARG AuthLDAPURL
+ARG AuthLDAPBindDN
+ARG AuthLDAPBindPassword
 
 ENV LANG UTF-8
 
