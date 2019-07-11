@@ -29,6 +29,27 @@ then
 EOF
 fi
 
+echo "generating dav_svn.conf file which config ldap auth $AuthLDAPURL"
+cat <<EOF > /etc/apache2/mods-available/dav_svn.conf
+<Location /svn/>
+	DAV svn
+	SVNParentPath /var/local/svn/
+	SVNListParentPath on
+
+	AuthzSVNAccessFile /etc/apache2/dav_svn/dav_svn.authz
+
+	Satisfy any
+	Require valid-user
+	AuthType Basic
+	AuthName "Subversion"
+	AuthBasicProvider ldap
+	AuthLDAPURL "$AuthLDAPURL"
+	AuthLDAPBindDN "$AuthLDAPBindDN"
+	AuthLDAPBindPassword "$AuthLDAPBindPassword"
+
+</Location>
+EOF
+
 if [ ! -f /etc/apache2/dav_svn/dav_svn.passwd ]
 then
     echo "generating empty htpasswd file for svn users"

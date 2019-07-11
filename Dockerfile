@@ -24,7 +24,7 @@ RUN mkdir /var/svn-backup
 RUN mkdir -p /var/local/svn
 RUN mkdir /etc/apache2/dav_svn
 
-ADD files/dav_svn.conf /etc/apache2/mods-available/dav_svn.conf
+#ADD files/dav_svn.conf /etc/apache2/mods-available/dav_svn.conf
 
 ADD files/svn-backuper.sh /usr/local/bin/
 ADD files/svn-project-creator.sh /usr/local/bin/

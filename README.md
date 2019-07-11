@@ -79,6 +79,6 @@ config.ini and userroleassignments.ini should be not include in volumes before w
     networks:
       - devops-network
     environment:
-      - AuthLDAPURL="ldap://ldap-service:389/dc=tech-trans,dc=com?cn?sub?(objectClass=person)"
-      - AuthLDAPBindDN="cn=admin,dc=tech-trans,dc=com"
-      - AuthLDAPBindPassword="tt24945000"
+      - AuthLDAPURL=ldap://ldap-service:389/dc=tech-trans,dc=com?cn?sub?(objectClass=person)
+      - AuthLDAPBindDN=cn=admin,dc=tech-trans,dc=com
+      - AuthLDAPBindPassword=tt24945000
