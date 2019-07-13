@@ -59,6 +59,8 @@ fi
 mkdir /run/apache2
 chown root:www-data /run/apache2
 chmod 0710 /run/apache2
+rm /run/apache2/* -fr
+rm /var/run/apache2/* -fr
 
 chown -R www-data:www-data "/var/local/svn/"
 cron -f &
