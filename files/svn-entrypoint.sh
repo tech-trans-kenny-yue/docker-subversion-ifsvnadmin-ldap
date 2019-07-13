@@ -56,5 +56,9 @@ then
     echo "# no users in this htpasswd file" > /etc/apache2/dav_svn/dav_svn.passwd
 fi
 
+mkdir /run/apache2
+chown root:www-data /run/apache2
+chmod 0710 /run/apache2
+
 chown -R www-data:www-data "/var/local/svn/"
 cron -f &
