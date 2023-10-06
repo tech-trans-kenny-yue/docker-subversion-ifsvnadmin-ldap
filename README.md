@@ -15,7 +15,7 @@ A cron running every 10 minutes will eventually pick it up.
 
 ## How to access your repository
 
-By defdault the repository is host on `/svn`, so for instance you can checkout `yourRepo` using `svn checkout http://yourDockerIp/svn/yourRepo`
+By default the repository is host on `/svn`, so for instance you can checkout `yourRepo` using `svn checkout http://yourDockerIp/svn/yourRepo`
 
 
 ## pre run configuration (optional)
